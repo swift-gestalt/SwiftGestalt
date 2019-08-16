@@ -1,0 +1,4 @@
+module SwiftGestaltShims [system] {
+  header "shim.h"
+  export *
+}
