@@ -12,6 +12,9 @@ let package = Package(
       name: "swift-gestalt",
       targets: ["swift-gestalt"]),
     .library(
+      name: "SwiftMetadata",
+      targets: ["SwiftMetadata"]),
+    .library(
       name: "SwiftRuntime",
       targets: ["SwiftRuntime"]),
   ],
@@ -24,11 +27,14 @@ let package = Package(
       name: "swift-gestalt",
       dependencies: ["SwiftGestalt", "SPMUtility"]),
     .target(
+      name: "SwiftMetadata",
+      dependencies: ["SwiftDemangleShims"]),
+    .target(
       name: "SwiftRuntime",
       dependencies: ["SwiftDemangleShims"]),
     .target(
       name: "SwiftGestalt",
-      dependencies: ["LLVM", "SwiftRuntime"]),
+      dependencies: ["LLVM", "SwiftMetadata"]),
     .target(
       name: "SwiftDemangleShims",
       dependencies: ["SwiftGestaltShims"]),
@@ -39,8 +45,8 @@ let package = Package(
       name: "SwiftGestaltTests",
       dependencies: ["SwiftGestalt"]),
     .testTarget(
-      name: "SwiftRuntimeTests",
-      dependencies: ["SwiftRuntime"]),
+      name: "SwiftMetadataTests",
+      dependencies: ["SwiftMetadata"]),
   ],
   cxxLanguageStandard: .cxx14
 )

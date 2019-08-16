@@ -9,7 +9,7 @@ import Foundation
 import Basic
 import SPMUtility
 import SwiftGestalt
-import SwiftRuntime
+import SwiftMetadata
 
 public final class DumpToolOptions: SwiftGestaltToolOptions {
   public var colorsEnabled: Bool = false

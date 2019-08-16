@@ -5,7 +5,7 @@
 /// This project is released under the MIT license, a copy of which is
 /// available in the repository.
 
-import SwiftRuntime
+import SwiftMetadata
 
 public enum Demangler {
   public static func demangleSymbol(_ symbol: String) -> String {

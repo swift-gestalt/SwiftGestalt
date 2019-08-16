@@ -7,7 +7,7 @@
 
 import Foundation
 import LLVM
-import SwiftRuntime
+import SwiftMetadata
 import SwiftDemangleShims
 
 public enum ReflectionError: Error {
